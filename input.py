@@ -1,0 +1,6 @@
+a=int(input("Enter a value:"))
+print(a)
+d=input("Enter a name:")
+print(d)
+x,y=input("Enter two numbers seperated by space:").split()
+print(x,y)
