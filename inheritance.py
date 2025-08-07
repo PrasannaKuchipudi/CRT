@@ -130,4 +130,4 @@ class Cricket2(Cricket):
         print("Right‑arm medium fast bowler")
         super().Hardik()
 h=Cricket2()
-h.Hardik()
+h.Hardik()   
