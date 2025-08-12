@@ -126,3 +126,30 @@ j=[CreditCardPayment(),UPIPayment()]
 for k in j:
     print(k.pay())
     print(k.refund())
+#Online Shopping Discount System
+from abc import ABC, abstractmethod
+class Product(ABC):
+    def __init__(self,name,price):
+        self.name=name 
+        self.price=price 
+    @abstractmethod
+    def calculate_discounted_price(self):
+        pass 
+class Electronics(Product):
+     def calculate_discounted_price(self):
+         return self.price - (self.price*0.10)
+class Clothing(Product):
+     def calculate_discounted_price(self):
+         return self.price - (self.price*0.20)
+class Groceries(Product):
+     def calculate_discounted_price(self):
+         return self.price - (self.price*0.05)
+name1=input("Enter the name for Electonics:")
+price1=float(input("Enter the price for Electronics:"))
+name2=input("Enter the name for Clothing:")
+price2=float(input("Enter the price for Clothing:"))
+name3=input("Enter the name for Groceries:")
+price3=float(input("Enter the price for Groceries:"))
+k=[Electronics(name1,price1),Clothing(name2,price2),Groceries(name3,price3)]
+for d in k:
+    print(f"{d.name} - Original Price {d.price} - Discounted Price {d.calculate_discounted_price()}")
