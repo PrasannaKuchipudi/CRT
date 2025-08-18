@@ -95,4 +95,15 @@ if match is not None:
     print(f"Month: {match.group(1)}")
     print(f"Date: {match.group(2)}")
 else:
-    print("The regex pattern does not match.")
+    print("The regex pattern does not match.") 
+# 18-08-2025 
+#split() - Split the every word in the given sentence
+import re
+a="My Favorite fruit is Mango."
+result=re.split(r"\s",a,maxsplit=1)
+print(result) 
+#sub - It is used for replace character or word in a sentence
+import re
+a="My Favorite Flower is Rose"
+result=re.sub(r"e","y",a)
+print(result) 
