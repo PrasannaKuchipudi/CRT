@@ -27,7 +27,12 @@ class LinkedList:
         if self.head is None:
             print("List is empty")
             return
-        self.head=self.head.next     
+        self.head=self.head.next   
+    def update_begin(self,new_data):
+        if not self.head:
+            print("List is empty")
+            return 
+        self.head.data=new_data
     def display(self):
         temp=self.head 
         while temp:
@@ -39,6 +44,8 @@ l1.insert_begin(100)
 l1.insert_begin(200)
 l1.display()  
 l1.delete_begin()
+l1.display()
+l1.update_begin(200)
 l1.display()
 #Insertion at the end
 class Node:
@@ -67,8 +74,7 @@ class LinkedList:
         temp=self.head 
         while temp.next.next:
             temp=temp.next 
-        temp.next=None 
-        
+        temp.next=None   
     def display(self):
             temp=self.head 
             while temp:
@@ -116,7 +122,31 @@ class LinkedList:
             if not temp.next:
                 print("Position out of range")
                 return 
-            temp.next=temp.next.next            
+            temp.next=temp.next.next     
+        def update_pos(self,pos,new_data):
+            if not self.head:
+                print("List is empty")
+                return 
+            temp=self.head 
+            for i in range(pos):
+                if not temp:
+                  print("Position out of bound")
+                  return 
+                temp=temp.next 
+            if temp:
+                temp.data=new_data 
+                return 
+            else:
+                print("Position out of range")   
+        def traverse(self):
+            if not self.head:
+                print("List is empty")
+                return 
+            temp=self.head 
+            while temp:
+                print(temp.data,end=" -> ")
+                temp=temp.next  
+            print("None") 
         def display(self):
             temp=self.head 
             while temp:
@@ -127,8 +157,12 @@ l3=LinkedList()
 l3.insert_pos(0,10)
 l3.insert_pos(1,20)
 l3.display()
+l3.update_pos(0,30)
+l3.display()
+l3.traverse()
 l3.delete_pos(0)
 l3.display()
+
 
 
 
