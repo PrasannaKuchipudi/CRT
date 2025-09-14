@@ -10,7 +10,7 @@ p3=Node()
 print(p1.data)
 print(p2.data)
 print(p3.data)
-print(p1.next,p2.next,p3.next)
+print(p1.next,p2.next,p3.next)                                                                             
 #Insertion at Begining
 class Node:
     def __init__(self,data):
