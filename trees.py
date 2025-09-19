@@ -1,7 +1,7 @@
 #15-09-2025
 #Linear Data Structure - Stacks,Queues,LinkedList,List 
-#Non-Linear Data Structure - Trees,Graphs 
-#A binary tree which follows tree constraints and it must have two nodes and maximum nodes of binary tree is two nodes 
+#Non-Linear Data Structure - Trees,Graphs      
+#A binary tree which follows tree constraints and it must have two nodes and maximum nodes of binary tree is two nodes  
 class Node:
     def __init__(self,data):
         self.data=data
